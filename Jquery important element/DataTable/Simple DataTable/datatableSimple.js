@@ -246,81 +246,103 @@
     });
    //javascript
    //ServerSide Pagination using sql query
-        var table = $('#sample_1').dataTable({
-            "bServerSide": true,
-            "sDom": '<"row header"<"pull-left marginleft" l><"pull-right marginright toolbar ">><"minheight"t><"row footer"<"pull-left marginleft margintop"i><"pull-right marginright"p>>',
-            "sPaginationType": "full_numbers",
-            "sEcho": 1,
-           // "ajax": {
-           //     "url": "<%=request.getContextPath()%>/unionpage",
-           //     "type": "POST",
-           //     "data": {
-           //         "para":"para"
-           //     }
-           // },
-            "sAjaxSource": "<%=request.getContextPath()%>/unionpage",
-            "iDisplayLength": 10,
-            //We will use below variable to track page number on server side(For more information visit: http://legacy.datatables.net/usage/options#iDisplayStart)
-            "iDisplayStart": 0,
-            "aoColumns": [
-                {"mData": "id"},
-                {"mData": "geoDivisionId"},
-                {"mData": "geoDistrictId"},
-                {"mData": "unionNameBng"},
-                {"mData": "bbsCode"},
-                {
-                    "mRender": function (data, type, full) {
-                        // return '<a href=<%=request.getContextPath()%>/unionpage/'+full.id+'>' + "Edit" + '</a>';
+		  var table = $('#sample_1').dataTable({
+        "bServerSide": true,
+        "sDom": '<"row header"<" col-md-8 pull-left" <"displayinline"l><"displayinline"i>><"col-md-4 pull-right toolbar">><"minheight"t><"row footer"<"text-center"p>>',
+        "sPaginationType": "full_numbers",
+        "sEcho": 1,
+        "language":{
+            "decimal":        "১",
+            "emptyTable":     "ইউনিয়ন খুজে পাওয়া যায় নাই",
+            "info":           " মোট _TOTAL_ ইউনিয়ন এর মধ্যে _START_ থেকে _END_ পর্যন্ত দেখানো হচ্ছে",
+            "infoEmpty":      "ইউনিয়ন খুজে পাওয়া যায় নাই",
+            "infoFiltered":   "(filtered from _MAX_ total entries)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "_MENU_",
+            "loadingRecords": "Loading...",
+            "processing":     "Processing...",
+            "search":         "Search:",
+            "zeroRecords":    "ইউনিয়ন খুজে পাওয়া যায় নাই",
+            "paginate": {
+                "first":      "প্রথম",
+                "last":       "শেষ",
+                "next":       "পরে",
+                "previous":   "আগে"
+            },
+            "aria": {
+                "sortAscending":  ": activate to sort column ascending",
+                "sortDescending": ": activate to sort column descending"
+            }
+        },
+         <%--"ajax": {--%>
+             <%--"url": "<%=request.getContextPath()%>/unionpage",--%>
+             <%--"type": "GET",--%>
+             <%--"data": {--%>
+                <%--// "para":"para"--%>
+             <%--}--%>
+         <%--},--%>
+        "sAjaxSource": "<%=request.getContextPath()%>/unionpage",
+        "iDisplayLength": 10,
+        //We will use below variable to track page number on server side(For more information visit: http://legacy.datatables.net/usage/options#iDisplayStart)
+        "iDisplayStart": 0,
+        "aoColumns": [
+            {"mData": "id"},
+            {"mData": "geoDivisionId"},
+            {"mData": "geoDistrictId"},
+            {"mData": "unionNameBng"},
+            {"mData": "bbsCode"},
+            {
+                "mRender": function (data, type, full) {
+                    // return '<a href=<%=request.getContextPath()%>/unionpage/'+full.id+'>' + "Edit" + '</a>';
 
-                        return '<form method="post" action="<%=request.getContextPath()%>/editunionview">' +
-                            '<input type="hidden" name="id" value="' + full.id + '">' +
-                            '<input type="hidden" name="unionnameeng" value="' + full.unionNameEng + '">' +
-                            '<input type="hidden" name="unionnamebng" value="' + full.unionNameBng + '">' +
-                            '<input type="hidden" name="unionbbscode" value="' + full.bbsCode + '">' +
-                            '<input type="hidden" name="divisionbbscode" value="' + full.divisionBbsCode + '">' +
-                            '<input type="hidden" name="districtbbscode" value="' + full.districtBbsCode + '">' +
-                            '<input type="hidden" name="upazillabbscode" value="' + full.upazilaBbsCode + '">' +
-                            '<input type="hidden" name="divId" value="' + full.geoDivisionId + '">' +
-                            '<input type="hidden" name="disId" value="' + full.geoDistrictId + '">' +
-                            '<input type="hidden" name="upaId" value="' + full.geoUpazilaId + '">' +
-                            '<button type="submit" name="submit_param" value="submit_value" class="link-button">' +
-                            "Edit" +
-                            '</button>' +
-                            '</form>';
-                    }
-
-                },
-                {
-                    "mRender": function (data, type, full) {
-                        // return '<a href=<%=request.getContextPath()%>/unionpage/'+full.id+'>' + "Edit" + '</a>';
-
-                        return '<form method="post" action="<%=request.getContextPath()%>/deleteunion">' +
-                            '<input type="hidden" name="id" value="' + full.id + '">' +
-                            '<button type="submit" name="submit_param" value="submit_value" class="link-button">' +
-                            "Delete" +
-                            '</button>' +
-                            '</form>';
-                    }
-                },
-                {
-                    "mRender": function (data, type, full) {
-                        // return '<a href=<%=request.getContextPath()%>/unionpage/'+full.id+'>' + "Edit" + '</a>';
-
-                        return '<form method="post" action="<%=request.getContextPath()%>/unionhistory">' +
-                            '<input type="hidden" name="id" value="' + full.id + '">' +
-                            '<input type="hidden" name="name" value="' + full.unionNameBng + '">' +
-                            '<button type="submit" name="submit_param" value="submit_value" class="link-button">' +
-                            "History" +
-                            '</button>' +
-                            '</form>';
-                    }
+                    return '<form method="post" action="<%=request.getContextPath()%>/editunionview">' +
+                        '<input type="hidden" name="id" value="' + full.id + '">' +
+                        '<input type="hidden" name="unionnameeng" value="' + full.unionNameEng + '">' +
+                        '<input type="hidden" name="unionnamebng" value="' + full.unionNameBng + '">' +
+                        '<input type="hidden" name="unionbbscode" value="' + full.bbsCode + '">' +
+                        '<input type="hidden" name="divisionbbscode" value="' + full.divisionBbsCode + '">' +
+                        '<input type="hidden" name="districtbbscode" value="' + full.districtBbsCode + '">' +
+                        '<input type="hidden" name="upazillabbscode" value="' + full.upazilaBbsCode + '">' +
+                        '<input type="hidden" name="divId" value="' + full.geoDivisionId + '">' +
+                        '<input type="hidden" name="disId" value="' + full.geoDistrictId + '">' +
+                        '<input type="hidden" name="upaId" value="' + full.geoUpazilaId + '">' +
+                        '<button type="submit" name="submit_param" value="submit_value" class="link-button">' +
+                        "Edit" +
+                        '</button>' +
+                        '</form>';
                 }
-            ]
+
+            },
+            {
+                "mRender": function (data, type, full) {
+                    // return '<a href=<%=request.getContextPath()%>/unionpage/'+full.id+'>' + "Edit" + '</a>';
+
+                    return '<form method="post" action="<%=request.getContextPath()%>/deleteunion">' +
+                        '<input type="hidden" name="id" value="' + full.id + '">' +
+                        '<button type="submit" name="submit_param" value="submit_value" class="link-button">' +
+                        "Delete" +
+                        '</button>' +
+                        '</form>';
+                }
+            },
+            {
+                "mRender": function (data, type, full) {
+                    // return '<a href=<%=request.getContextPath()%>/unionpage/'+full.id+'>' + "Edit" + '</a>';
+
+                    return '<form method="post" action="<%=request.getContextPath()%>/unionhistory">' +
+                        '<input type="hidden" name="id" value="' + full.id + '">' +
+                        '<input type="hidden" name="name" value="' + full.unionNameBng + '">' +
+                        '<button type="submit" name="submit_param" value="submit_value" class="link-button">' +
+                        "History" +
+                        '</button>' +
+                        '</form>';
+                }
+            }
+        ]
 
 
-        });
-
-        // $("div.toolbar").html('<div style="display:flex;width: 20%; float:right" > <input type="password" style="flex:1"> <button class="fa fa-arrow-down" id="advancesearch" type="submit"></button></div>');
+    });
 
 
         $("div.toolbar").html($('#advancesearch'));
