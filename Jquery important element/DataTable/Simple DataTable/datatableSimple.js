@@ -75,6 +75,7 @@
         }
 		
 		
+
 		
 	//html	
      <table class="table  table-striped table-bordered table-hover" id="sample_1">
@@ -100,6 +101,149 @@
 
                                 </table>
 								
+								
+	 <div id='advancesearch' style='display:none;'>
+        <div class="inbox-header" style="margin-top:5px;">
+            <form id="file-search" class="form-inline" action="javascript:;">
+                <div class="input-group" style="width: auto !important;display:flex;width: 20%; float:right">
+                    <input id="searchFileMessage" type="text" class="form-control" styles="heigth = 100%"
+                           placeholder="Search...">
+                    <div class="dropdown dropdown-lg">
+                        <button id="advancesearchoption"
+                                style="padding-bottom: 4px;height: 34px; border-radius:0px; box-shadow:none;"
+                                type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="true"><span class="md-click-circle md-click-animate"></span><span
+                                class="caret" style="margin-bottom:5px;"></span></button>
+                        <div class="dropdown-menu dropdown-menu-right advanced-file-search" role="menu"
+                             style="background-color: #fffffe;margin-top: 2px;">
+                            <table>
+                                <thead>
+                                <th></th>
+                                <th></th>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <label class="control-label">Union Name<span
+                                                class="required" aria-required="true"> * </span></label>
+                                    </td>
+                                    <td style="padding-left:10px;padding-bottom:10px">
+                                        <div class="">
+                                            <div class="input-icon">
+                                                <i class="fa fa-angle-double-right tooltips "
+                                                   data-original-title="please write Union Name"
+                                                   data-container="body"></i>
+                                                <input style="padding-left:25px" type="text" data-required="1"
+                                                       class="form-control"
+                                                       name="unionname">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label">Union BBS Code<span
+                                                class="required" aria-required="true"> * </span></label>
+                                    </td>
+                                    <td style="padding-left:10px;padding-bottom:10px">
+                                        <div class="">
+                                            <div class="input-icon">
+                                                <i class="fa fa-angle-double-right tooltips "
+                                                   data-original-title="please write Union BBS Code"
+                                                   data-container="body"></i>
+                                                <input style="padding-left:25px" type="text" data-required="1"
+                                                       class="form-control"
+                                                       name="unionbbscode">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label">Division<span
+                                                class="required" aria-required="true"> * </span></label>
+                                    </td>
+                                    <td style="padding-left:10px;padding-bottom:10px">
+                                        <select class="form-control" name="divdata" id="divisiondropdown">
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label">District<span
+                                                class="required" aria-required="true"> * </span></label>
+                                    </td>
+                                    <td style="padding-left:10px;padding-bottom:10px">
+                                        <select class="form-control" name="disdata" id="districtdropdown">
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label class="control-label">Upazilla<span
+                                                class="required" aria-required="true"> * </span></label>
+                                    </td>
+                                    <td style="padding-left:10px">
+                                        <select class="form-control" name="upadata" id="upazilladropdown">
+                                        </select>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="row" style="padding: 5px 0px;">
+                                <div class="form-group pull-right col-xs-4">
+                                    <button id="AdvancedSearchCancel" name="AdvancedSearchCancel" type="reset"
+                                            class="btn btn-danger btn-sm pull-left"><span class="glyphicon glyphicon-"
+                                                                                          aria-hidden="true"></span>বাতিল
+                                    </button>
+                                    <button id="AdvancedSearchSubmit" name="AdvancedSearchSubmit" type="button"
+                                            class="btn btn-primary btn-sm pull-right"><span
+                                            class="glyphicon glyphicon-search" aria-hidden="true"></span>অনুসন্ধান
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+			
+	//javascript 
+	//clientSide data table
+	 //working
+        var example_table = $('#sample_1').DataTable({
+            'ajax': {
+                url: '<%=request.getContextPath()%>/getOffice_LayerShow',
+                dataSrc: ''
+            },
+            'columns': [
+                {data: 'id'},
+                {data: 'office_ministry_id'},
+                {data: 'layer_name_bng'},
+                {data: 'layer_level'},
+                {data: 'layer_sequence'}
+            ]
+        });
+        example_table.ajax.reload()
+    });
+
+    //working
+    var table = $('#sample_1').dataTable({
+        'processing': true,
+        'serverside': true,
+        'ajax': {
+            url: '<%=request.getContextPath()%>/getOffice_LayerShow',
+            dataSrc: ''
+        },
+        'columns': [
+            {data: 'id'},
+            {data: 'office_ministry_id'},
+            {data: 'layer_name_bng'},
+            {data: 'layer_level'},
+            {data: 'layer_sequence'}
+        ]
+    });
    //javascript
    //ServerSide Pagination using sql query
         var table = $('#sample_1').dataTable({
@@ -179,96 +323,7 @@
         // $("div.toolbar").html('<div style="display:flex;width: 20%; float:right" > <input type="password" style="flex:1"> <button class="fa fa-arrow-down" id="advancesearch" type="submit"></button></div>');
 
 
-        $("div.toolbar").html('<div class="inbox-header" style="margin-top:5px;">\
-                                 <form id="file-search"class="form-inline" action="javascript:;">\
-                                    <div class="input-group" style="width: auto !important;display:flex;width: 20%; float:right">\
-                                        <input id="searchFileMessage" type="text" class="form-control" styles="heigth = 100%" placeholder="Search...">\
-                                        <div class="dropdown dropdown-lg">\
-                                            <button id = "advancesearchoption" style="padding-bottom: 4px;height: 34px; border-radius:0px; box-shadow:none;" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="true" ><span class="md-click-circle md-click-animate"></span><span class="caret" style="margin-bottom:5px;"></span></button>\
-                                            <div class="dropdown-menu dropdown-menu-right advanced-file-search" role="menu" style="background-color: #fffffe;margin-top: 2px;">\
-                                                <table>\
-                                                    <thead>\
-                                                        <th></th>\
-                                                        <th></th>\
-                                                    </thead>\
-                                                    <tbody>\
-                                                        <tr>\
-                                                            <td>\
-                                                                <label class="control-label">Union Name<span\
-                                                                class="required" aria-required="true"> * </span></label>\
-                                                            </td>\
-                                                            <td style="padding-left:10px;padding-bottom:10px">\
-                                                                <div class="">\
-                                                                    <div class="input-icon">\
-                                                                        <i class="fa fa-angle-double-right tooltips "\
-                                                                            data-original-title="please write Union Name"\
-                                                                            data-container="body"></i>\
-                                                                            <input style="padding-left:25px" type="text" data-required="1" class="form-control"\
-                                                                                    name="unionname">\
-                                                                    </div>\
-                                                                </div>\
-                                                            </td>\
-                                                        </tr>\
-                                                        <tr>\
-                                                            <td>\
-                                                                <label class="control-label">Union BBS Code<span\
-                                                                    class="required" aria-required="true"> * </span></label>\
-                                                            </td>\
-                                                            <td style="padding-left:10px;padding-bottom:10px">\
-                                                                <div class="">\
-                                                                    <div class="input-icon">\
-                                                                        <i class="fa fa-angle-double-right tooltips "\
-                                                                            data-original-title="please write Union BBS Code"\
-                                                                            data-container="body"></i>\
-                                                                            <input style="padding-left:25px" type="text" data-required="1" class="form-control"\
-                                                                                    name="unionbbscode">\
-                                                                    </div>\
-                                                                </div>\
-                                                            </td>\
-                                                        </tr>\
-                                                        \ <tr>\
-                                                            <td>\
-                                                                <label class="control-label">Division<span\
-                                                                    class="required" aria-required="true"> * </span></label>\
-                                                            </td>\
-                                                            <td style="padding-left:10px;padding-bottom:10px">\
-                                                                  <select class="form-control" name="divdata" id="divisiondropdown">\
-                                                                </select>\
-                                                            </td>\
-                                                        </tr>\
-                                                        \ <tr>\
-                                                            <td>\
-                                                                <label class="control-label">District<span\
-                                                                    class="required" aria-required="true"> * </span></label>\
-                                                            </td>\
-                                                            <td style="padding-left:10px;padding-bottom:10px">\
-                                                                  <select class="form-control" name="disdata" id="districtdropdown">\
-                                                                </select>\
-                                                            </td>\
-                                                        </tr>\
-                                                        \ <tr>\
-                                                            <td>\
-                                                                <label class="control-label">Upazilla<span\
-                                                                    class="required" aria-required="true"> * </span></label>\
-                                                            </td>\
-                                                            <td style="padding-left:10px">\
-                                                                <select class="form-control" name="upadata" id="upazilladropdown">\
-                                                                </select>\
-                                                            </td>\
-                                                        </tr>\
-                                                    </tbody>\
-                                                </table>\
-                                                <div class="row" style="padding: 5px 0px;">\
-                                                    <div class="form-group pull-right col-xs-4">\
-                                                        <button id="AdvancedSearchCancel" name="AdvancedSearchCancel" type="reset" class="btn btn-danger btn-sm pull-left"><span class="glyphicon glyphicon-" aria-hidden="true"></span>বাতিল</button>\
-                                                        <button id="AdvancedSearchSubmit" name="AdvancedSearchSubmit" type="button" class="btn btn-primary btn-sm pull-right"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>অনুসন্ধান</button>\
-                                                    </div>\
-                                                </div>\
-                                            </div>\
-                                        </div>\
-                                    </div>\
-                                 </form>\
-                               </div>');
+        $("div.toolbar").html($('#advancesearch'));
         //$('#search-inp').onclick(function(){
         // table.search($(this).val());
         //   table.fnFilter(1);
