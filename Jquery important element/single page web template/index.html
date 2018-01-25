@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <!-- Plugin CSS <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"> -->
+    
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+	<style>
+		.masthead{
+				background-image: url("img/header/header.jpg")!important;
+
+		}
+		.masthead > .headericon{
+		  padding-top: 10rem;
+		  padding-bottom: calc(10rem - 56px);
+		  background-image: url("img/logo/logo.png");
+		  background-position: center center;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover; 
+		  height:100%;
+		  width:100%;
+		}
+		
+		.carousel-item {
+		  height:100%;
+		  background: no-repeat center center scroll;
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+		#person img {
+			display: block;
+			position: relative;
+			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.imageoverlaped {
+			width: 100%;
+			margin: 0px;
+			padding: 5px;
+			float: left;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			z-index: 1000;
+			background-color: transparent;
+			color: black;
+			font-weight: bold;
+		}
+		.tag {
+			width: 95%;
+			height: 20%;
+			margin-left: 25px;
+			margin-right: 10px;
+			float: left;
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			z-index: 1000;
+			background-color: transparent;
+			padding: 5px;
+			color: black;
+			font-weight: bold;
+		}
+		.middlecontainer {
+			  display: flex;
+			  justify-content: center;
+			  background: transparent;
+		}
+
+		.middle {
+			  background: transparent;
+			  align-self: center;
+			  padding: 0rem;
+		}
+		*{
+			font-family:'Roboto Condensed', sans-serif;
+		}
+		a {
+			color: black;
+		}
+		
+		#contact{
+			padding:0px !important;
+			padding-top:5px !important;
+		}
+		#person{
+			padding:30px !important;
+		}
+		#standard{
+			padding-bottom:20px !important;
+			background-color:#F2F5F7;
+		}
+		#service{
+			padding-bottom:300px !important;
+		}
+		#about{
+			background-color:#F2F5F7 !important;
+			color:black !important;
+		}
+		.light{
+			border-color: black !important;
+		}
+		#about > div > div > div.col-md-4.text-center > h2,#about > div > div > div.col-md-4.text-center > p{
+			color:black !important;
+		}
+		
+		#standrardcontent > div > div > div > div > h4 > a{
+			color:#41CEE0!important;
+		}
+		.btn-light{
+			background-color:#41CEE0!important;
+		}
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+		  font-family: 'Roboto Condensed', sans-serif; 
+		  color:black;
+		}
+		p{
+			color:black;
+		}
+		#standrardcontent > .row {
+			margin-top :50px;
+		}
+		.servicecontent{
+			margin-top:50px;
+		}
+	</style>
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <img src="img/logo/logosmall.png"/>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about" style="color:purple;">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#standard" style="color:purple;">Standard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#service" style="color:purple;">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact" style="color:purple;">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="headericon">
+      </div>
+
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container" style="height:500px;">
+        <div class="row" style ="height:100%">
+          <div class="col-md-4  text-center">
+            <h2 class="section-heading text-white">OISF</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up 
+			and running in no time! All of the templates and themes on Start Bootstrap are open source, free 
+			to download, and easy to use. No strings attached!Start Bootstrap has everything you need to get your new website up 
+			and running in no time! All of the templates and themes on Start Bootstrap are open source, free 
+			to download, and easy to use. No strings attachedStart Bootstrap has everything you need to get your new website up 
+			and running in no time! All of the templates and themes on Start Bootstrap are open source, free 
+			to download, and easy to use. No strings attached</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#standard">Get Started!</a>
+          </div>
+		  <div class="col-md-8">
+			  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000" style="height:100%">
+					<ol class="carousel-indicators">
+					  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+					  <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox" style="height:100%">
+					  <!-- Slide One - Set the background image for this slide in the line below -->
+					  <div class="carousel-item active" style="background-image: url('img/imageslider/page/page1.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					  <!-- Slide Two - Set the background image for this slide in the line below -->
+					  <div class="carousel-item" style="background-image: url('img/imageslider/page/page2.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					  <!-- Slide Three - Set the background image for this slide in the line below -->
+					  <div class="carousel-item" style="background-image: url('img/imageslider/page/page3.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					  <div class="carousel-item " style="background-image: url('img/imageslider/page/page4.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					  <!-- Slide Two - Set the background image for this slide in the line below -->
+					  <div class="carousel-item" style="background-image: url('img/imageslider/page/page5.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					  <!-- Slide Three - Set the background image for this slide in the line below -->
+					  <div class="carousel-item" style="background-image: url('img/imageslider/page/page6.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					  <div class="carousel-item " style="background-image: url('img/imageslider/page/page7.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					  <!-- Slide Two - Set the background image for this slide in the line below -->
+					  <div class="carousel-item" style="background-image: url('img/imageslider/page/page8.png');background-color:white;background-size:100% 100%;">
+						<div class="carousel-caption d-none d-md-block">
+						  <h3></h3>
+						  <p></p>
+						</div>
+					  </div>
+					 
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					  <img src="img/imageslider/back.png" style="margin-left: -110px;">
+					 
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					  <img src="img/imageslider/next.png" style="margin-right: -117.5px;">
+				
+					</a>
+				  </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	<section class="bg-primary" id="person" style="background-color:wheat!important">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3" style="text-align:center">
+					<img src="img/person/SAJEEB-WAZED.png">
+					SAJEEB WAZED<br/>
+					Adviser to Hon'ble PM
+				</div>
+				<div class="col-md-3" style="text-align:center">
+				<img src="img/person/Anir-Chowdhury.png">
+					Anir Chowdhury<br/>
+					Policy Adviser
+				</div>
+				<div class="col-md-3" style="text-align:center">
+				<img src="img/person/Dr.-Md.-Abdul-Mannan.png">
+					Dr. Md. Abdul Mannan<br/>
+					Director - Team Head, e-Service
+				</div>
+				<div class="col-md-3" style="text-align:center">
+				<img src="img/person/Mohammad-Arfe-Elahi.png">
+					Mohammad Arfe Elahi<br/>
+					IT Manager
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section id="standard">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" style="text-shadow: 4px 4px 4px #aaa;">Standard & Protocol</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+		 <div class="row">
+          <div class="col-lg-12">
+            <p>CSS level 3 offers other possibilities. At this time (2014), a good way to center blocks vertically without 
+			using absolute positioning (which may cause overlapping text) is still under discussion. But if you know that 
+			overlapping text will not be a problem in your document, you can use the 'transform' property to center an absolutely 
+			positioned element. For example:
+			For a document that looks like this:
+			<span>
+			<pre>
+				the style sheet looks like this:
+
+				div.container3 {
+				   height: 10em;
+				   position: relative }              /* 1 */
+				div.container3 p {
+				   margin: 0;
+				   position: absolute;               /* 2 */
+				   top: 50%;                         /* 3 */
+				   transform: translate(0, -50%) }   /* 4 */
+			   </pre>
+			</span>
+			The essential rules are:
+
+			Make the container relatively positioned, which declares it to be a container for absolutely positioned elements.
+			Make the element itself absolutely positioned.
+			Place it halfway down the container with 'top: 50%'. (Note that 50%' here means 50% of the height of the container.)
+			Use a translation to move the element up by half its own height. (The '50%' in 'translate(0, -50%)' refers to the height of the element itself.)
+			Recently (since about 2015), another technique has also become available in several CSS implementations. It is based on the new 'flex' keyword for the 'display' property.
+			This keyword is meant for use in graphical user interfaces (GUIs), but nothing stops you from using it in a document, if the document happens 
+			to have the right structure.
+			</p>
+          </div>
+        </div>
+      </div>
+	  
+      <div class="container" id="standrardcontent">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+			<img src="img/standard/BoxBG1.png" style="width:inherit;">
+			<div class="imageoverlaped">
+				<img src="img/standard/Data-Standerd.png" style="width:inherit;">
+				<div class="tag"> 
+					<h4><a href="#" style="color:skyblue">Data Standerd</a></h4>
+					<h6> hello data standard </h6>
+				</div>
+			</div>
+			
+          </div>
+		  <div class="col-lg-4 col-md-4">
+			<img src="img/standard/BoxBG2.png" style="width:inherit;">
+			<div class="imageoverlaped">
+				<img src="img/standard/Integration-Standards.png" style="width:inherit;">
+				<div class="tag"> 
+					<h4><a href="#" style="color:skyblue">Integration-Standards</a></h4>
+					<h6> hello Integration-Standards </h6>
+				</div>
+			</div>
+			
+          </div>
+		  <div class="col-lg-4 col-md-4">
+			<img src="img/standard/BoxBG1.png" style="width:inherit;">
+			<div class="imageoverlaped">
+				<img src="img/standard/Security-Standards.png" style="width:inherit;">
+				<div class="tag"> 
+					<h4><a href="#">Security-Standards</a></h4>
+					<h6> hello Security-Standards </h6>
+				</div>
+			</div>
+			
+          </div>
+    
+		</div>
+		<div class ="row">
+			<div class="col-lg-4 col-md-4">
+			<img src="img/standard/BoxBG2.png" style="width:inherit;">
+			<div class="imageoverlaped">
+				<img src="img/standard/Deployment-Standards.png" style="width:inherit;">
+				<div class="tag"> 
+					<h4><a href="#">Deployment-Standards</a></h4>
+					<h6> hello Deployment-Standards </h6>
+				</div>
+			</div>
+			
+          </div>
+		  <div class="col-lg-4 col-md-4">
+			<img src="img/standard/BoxBG1.png" style="width:inherit;">
+			<div class="imageoverlaped">
+				<img src="img/standard/Data-Integrity-Policy.png" style="width:inherit;">
+				<div class="tag"> 
+					<h4><a href="#">Data-Integrity-Policy</a></h4>
+					<h6> hello Data-Integrity-Policy </h6>
+				</div>
+			</div>
+			
+          </div>
+		  <div class="col-lg-4 col-md-4">
+			<img src="img/standard/BoxBG2.png" style="width:inherit;">
+			<div class="imageoverlaped">
+				<img src="img/standard/Software-Architectural-Standard.png" style="width:inherit;">
+				<div class="tag"> 
+					<h4><a href="#">Architecture Standard</a></h4>
+					<h6> hello Software Architecture Standards </h6>
+				</div>
+			</div>
+			
+          </div>
+		</div>
+      </div>
+    </section>
+	
+	<section  id="service">
+      <div class="container">
+		<div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" style="text-shadow: 4px 4px 4px #aaa;">Service</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+		<div class="row">
+          <div class="col-lg-12 ">
+            <p > it halfway down the container with 'top: 50%'. (Note that 50%' here means 50% of the height of the container.)
+			Use a translation to move the element up by half its own height. (The '50%' in 'translate(0, -50%)' refers to the height of the element itself.)
+			Recently (since about 2015),</p>
+         
+          </div>
+        </div>
+		<div class="row servicecontent">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 middlecontainer">
+		  
+			<div class = "middle">
+				<img src="img/service/Core-Services.png">
+			</div>
+			<div class = "col-md-9">
+				<h4>Core Service</h4>
+				<p>it halfway down the</p>
+				<p>Use a translation to move</p>
+				<p>up by half its own height</p>
+				<p>the height of the container.</p>
+				
+			</div>
+         
+          </div>
+		  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 middlecontainer">
+		  
+			<div class = "middle">
+				<img src="img/service/Share-Service.png">
+			</div>
+			<div class = "col-md-9">
+				<h4>Share Service</h4>
+				<p>it halfway down the</p>
+				<p>Use a translation to move</p>
+				<p>up by half its own height</p>
+				<p>the height of the container.</p>
+				
+			</div>
+         
+          </div>
+		  
+		  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 middlecontainer">
+		  
+			<div class = "middle">
+				<img src="img/service/Service-Registration.png">
+			</div>
+			<div class = "col-md-9">
+				<h4>Service Registration</h4>
+				<p>it halfway down the </p>
+				<p>Use a translation to move</p>
+				<p>up by half its own height</p>
+				<p>the height of the container.</p>
+				
+			</div>
+         
+          </div>		  
+		  
+        </div>
+		<div class="row servicecontent" style="margin-top:50px;">
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 middlecontainer">
+		  
+			<div class = "middle">
+				<img src="img/service/Blank-Circle.png">
+			</div>
+			<div class = "col-md-9">
+				<h4>Core Service</h4>
+				<p>it halfway down the</p>
+				<p>Use a translation to move</p>
+				<p>up by half its own height</p>
+				<p>the height of the container.</p>
+				
+			</div>
+         
+          </div>
+		  <div class="col-lg-4 col-md-4 middlecontainer">
+		  
+			<div class = "middle">
+				<img src="img/service/Blank-Circle.png">
+			</div>
+			<div class = "col-md-9">
+				<h4>Share Service</h4>
+				<p>it halfway down the</p>
+				<p>Use a translation to move</p>
+				<p>up by half its own height</p>
+				<p>the height of the container.</p>
+				
+			</div>
+         
+          </div>
+		  
+		  <div class="col-lg-4 col-md-4 middlecontainer">
+		  
+			<div class = "middle">
+				<img src="img/service/Blank-Circle.png">
+			</div>
+			<div class = "col-md-9">
+				<h4>Service Registration</h4>
+				<p>it halfway down the </p>
+				<p>Use a translation to move</p>
+				<p>up by half its own height</p>
+				<p>the height of the container.</p>
+				
+			</div>
+         
+          </div>
+		</div>
+		
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <div style="background-color:#F2F2F2"">
+		 <div class=" footer page-footer-custom " style="margin-right:2%;margin-left:2%;">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="fa-ul text-left">
+                        <h4 style=" border-bottom: 1px solid ;padding-bottom: 5px;"><b>Home</b></h4>
+
+
+                        <a href="#">
+                            <li>Condition for Use</li>
+                        </a>
+                        <a href="#">
+                            <li>In Cooperation With</li>
+                        </a>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+                        <a href="#">
+                            <li>Site Map</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <ul class="fa-ul text-left">
+                        <h4 style=" border-bottom: 1px solid ;padding-bottom: 5px;"><b>Important Links</b></h4>
+                        <a href="http://www.bangabhaban.gov.bd/">
+                            <li>President's Office</li>
+                        </a>
+                        <a href="http://www.pmo.gov.bd">
+                            <li>Prime Minister's Office</li>
+                        </a>
+                        <a href="http://www.mopa.gov.bd">
+                            <li>Ministry of Public Administration</li>
+                        </a>
+                        <a href="http://www.infokosh.gov.bd/">
+                            <li>E-Information Cell</li>
+                        </a>
+                        <a href="http://a2i.pmo.gov.bd/">
+                            <li>a2i Programme</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <ul class="fa-ul text-left">
+                        <h4 style=" border-bottom: 1px solid ;padding-bottom: 5px;"><b>Social</b></h4>
+                        <span class="fa-stack fa-sm">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span><span class="fa-stack fa-sm">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                        <span class="fa-stack fa-sm">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                </span>
+					<span class="fa-stack fa-sm">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                </span>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 style=" border-bottom: 1px solid;padding-bottom: 5px;"><b>Planning and Implementation</b></h4>
+                    <div class="logo_a2i" style="margin-top:5%; margin-left:180px">
+                        <a href="http://a2i.pmo.gov.bd/">
+                           <img src="img/logo/a2i.png" width="41" height="45" style="margin-right:  10px;">
+                            <img src="img/logo/bd_gov.png" width="41" height="45">
+                        </a>
+
+                    </div>
+
+                    <div class="copy-right-title" style="margin-top:5%;">
+                        <p style="font-size: 11px">
+                            Copyrights © 2017 All Rights Reserved<br>
+                            Government of the People's Republic of Bangladesh</p>
+                    </div>
+
+                </div>
+            <!-- end of row -->
+        </div>
+	
+        <!-- end of container -->
+    </div>
+      </div>
+   
+	  <div style="height:40px;background-color:#9698C8">
+		
+	  </div>
+
+   </section>
+	
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<script>
+	
+		$(document).ready(function(){
+		
+		
+			  // Smooth scrolling using jQuery easing
+			  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				  var target = $(this.hash);
+				  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				  if (target.length) {
+					$('html, body').animate({
+					  scrollTop: (target.offset().top - 57)
+					}, 1000, "easeInOutExpo");
+					 $('a.js-scroll-trigger[href*="#"]:not([href="#"])').removeClass('active');
+					 $(this).addClass('active');
+					return false;
+				  }
+				}
+			  });
+
+			  // Collapse Navbar
+			  var navbarCollapse = function(document) {
+				if ($("#mainNav").offset().top > 100) {
+				  $("#mainNav").addClass("navbar-shrink");
+				} else {
+				  $("#mainNav").removeClass("navbar-shrink");
+				  $('#navbarResponsive > ul > li > a > i').remove();
+				}
+			
+			  };
+			  
+			 
+			  // Collapse the navbar when page is scrolled
+			  $(document).scroll(function(event,ex){
+				navbarCollapse($(this));
+			  });
+			 
+			   // Activate scrollspy to add active class to navbar items on scroll
+			  $('body').scrollspy({
+				target: '#mainNav',
+				offset: 500
+			  });
+				$(window).on('activate.bs.scrollspy', function () {
+					var x = $("#navbarResponsive > ul > li > a.active").text();
+					var downarrow = '<i style><img src="img/logo/downarrow.png" style="margin-left:7px;margin-top:-2px;"></i>';
+					$('#navbarResponsive > ul > li > a > i').remove();
+					$('#navbarResponsive > ul > li > a.active').append(downarrow);
+					console.log(x);
+				})
+				
+		});
+	</script>
+  </body>
+
+</html>
