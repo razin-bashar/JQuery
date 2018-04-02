@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			html{
+				height:360px;
+			}
+			body{
+				margin:0px;
+			}
+			#fst{
+				display:flex;
+				flex-direction:column;
+				justify-content: space-between; 
+			}
+			#fstfst{
+				align-self: stretch;
+			}
+			#tfst{
+				align-self: flex-end;
+			}
+			#stfst{
+				align-self: center;
+			}
+		</style>
+	</head>
+	<body style="height:300px">
+		<div id = "fst" style =" height: 120px; background-color:red;width:200px;">	
+			<div id = "fstfst" style =" height:20px; background-color:green;width:200px;">		
+			</div>	
+			<div id = "stfst" style =" height:20px; background-color:black;width:20px;">		
+			</div>
+			<div id = "tfst" style =" height:20px; background-color:yellow;width:200px;">		
+			</div>			
+		</div>
+	</body>
+	<script>
+		$(document).ready(function(){
+		});
+	</script>
+</html>

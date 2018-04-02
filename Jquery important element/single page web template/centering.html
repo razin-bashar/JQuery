@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			html{
+				height:3600px;
+			}
+			body{
+				margin-left:200px;
+			}
+			div{
+				border:1px solid black;
+			}
+			#a1a{
+				text-align:center;
+			}
+			#a11a{
+				display:inline-block;
+			}
+			#b2b{
+				position:relative;
+			}
+			#b21b{
+				position:absolute;
+				top:50%;
+				transform: translate(0,-50%);
+			}
+			#c3c{
+				position:relative;
+			}
+			#c31c{
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%,-50%);
+			}
+			#d4d{
+				display:flex;
+				justify-content:center;//making horizontal  centering 
+			}
+			#d41d{
+				align-self:center;//making verical centering
+			}
+			#e{
+				display:flex;//horizontal centering
+				justify-content:center;
+			}
+			#e1{
+			
+			}
+			#f{
+				display:flex; //vertical centering
+			}
+			#f1{
+				align-self:center;
+			}
+			
+			#g{
+				display:flex;
+				justify-content:space-between;
+				flex-direction:column;
+			}
+			#g1{
+				align-self:center;
+			}
+			#g2{
+				align-self:center;
+			}
+			#g3{
+				align-self:center;
+			}
+			
+			#h{
+				position:relative;
+			}
+			#h1{
+				position:absolute;
+				left:50%;
+				transform: translate(-50%,0);
+				margin-top:20px;
+			}
+			#h2{
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform: translate(-50%,-50%);
+			}
+			#h3{
+				position:absolute;
+				left:50%;
+				transform: translate(-50%,0);
+				bottom:20;
+			}
+		</style>
+	</head>
+	<body style="height:300px">
+		<div id = "a1a" style =" height:300px; background-color:red;width:200px;"><!-- horizontal centering-->
+			<div id = "a11a" class="child" style =" height:200px; background-color:yellow;width:100px;">
+			
+			</div>
+		</div>
+		<div id = "b2b"  style =" height:300px; background-color:blue;width:200px;"><!-- vertical centering-->
+			<div id = "b21b" class="child" style =" height:200px; background-color:yellow;width:100px;">
+			
+			</div>
+		</div>
+		<div id = "c3c" style =" height:300px; background-color:black;width:200px;"><!-- vertical horizontal both-->
+			<div id = "c31c" class="child" style =" height:200px; background-color:yellow;width:100px;">
+			
+			</div>
+		</div>
+		<div id = "d4d" style =" height:300px; background-color:green;width:200px;">
+			<div id = "d41d" class="child" style =" height:200px; background-color:yellow;width:100px;">
+			
+			</div>
+		</div>
+		<div id = "e" style =" height:300px; background-color:red;width:200px;">
+			<div id = "e1" class="child" style =" height:200px; background-color:yellow;width:100px;">
+			
+			</div>
+		</div>
+		<div id = "f" style =" height:300px; background-color:black;width:200px;">
+			<div id = "f1" class="child" style =" height:200px; background-color:yellow;width:100px;">
+			
+			</div>
+		</div>
+		
+		<div id = "g" style =" height:600px; background-color:green;width:200px;">
+			<div id = "g1" class="child" style =" height:100px; background-color:yellow;width:100px;">
+			
+			</div>
+			<div id = "g2" class="child" style =" height:100px; background-color:red;width:100px;">
+			
+			</div>
+			<div id = "g3" class="child" style =" height:100px; background-color:blue;width:100px;">
+			
+			</div>
+		</div>
+		
+		<div id = "h" style =" height:600px; background-color:black;width:200px;">
+			<div id = "h1" class="child" style =" height:100px; background-color:yellow;width:100px;">
+			
+			</div>
+			<div id = "h2" class="child" style =" height:100px; background-color:red;width:100px;">
+			
+			</div>
+			<div id = "h3" class="child" style =" height:100px; background-color:blue;width:100px;">
+			
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		$(document).ready(function(){
+	
+		});
+	</script>
+</html>
